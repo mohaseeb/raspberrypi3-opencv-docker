@@ -1,5 +1,5 @@
 ## About
-The Git repo of an OpenCV (python interface) [Docker image](https://hub.docker.com/r/mohaseeb/raspberrypi3-python-opencv/)
+The Git repo of an (OpenCV)[https://opencv.org/] (python interface) [Docker image](https://hub.docker.com/r/mohaseeb/raspberrypi3-python-opencv/)
 , for Raspberry Pi 3 with Raspbian OS (Debian).
 
 ## Usage
