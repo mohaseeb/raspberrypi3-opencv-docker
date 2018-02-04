@@ -18,6 +18,13 @@ cd raspberrypi3-opencv-docker
 ```commandline
 docker build -t my_pi_opencv_img .
 ```
+* And run it
+```commandline
+docker run -it --rm \
+       --name my_opencv_app_run \
+       my_pi_opencv_img \
+       python -c "import cv2; print(cv2.__version__)"
+```
 
 ## Credits
 Some of the steps in [this blog post](https://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/)
