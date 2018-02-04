@@ -18,7 +18,7 @@ rm -rf opencv_contrib.zip
 OPENCV_SRC_DIR=`pwd`/opencv-$OPENCV_VERSION
 OPENCV_CONTRIB_MODULES_SRC_DIR=`pwd`/opencv_contrib-$OPENCV_VERSION/modules
 
-# build and and install
+# build and install
 cd $OPENCV_SRC_DIR
 mkdir build && cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
