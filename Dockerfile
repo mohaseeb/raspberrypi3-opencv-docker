@@ -34,6 +34,3 @@ RUN pip install --no-cache-dir \
 # Install OpenCV
 COPY download_build_install_opencv.sh download_build_install_opencv.sh
 RUN ./download_build_install_opencv.sh
-
-# Your commands, if any, goes here
-
