@@ -7,7 +7,7 @@ See [the image Docker Hub page](https://hub.docker.com/r/mohaseeb/raspberrypi3-p
  for information on how to use the image.
 
 ## Build
-If you prefer to build the image yourself (takes around 3 hours!), you can do it as follows:
+If you prefer to build the image yourself (takes around 2 hours!), you can do it as follows:
 * Clone this repository into a Raspberry Pi 3 running Raspbian OS.
 ```commandline
 git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
