@@ -15,8 +15,7 @@ git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
 cd raspberrypi3-opencv-docker/opencv-<version>
 ```
 * (Optionally) change the OpenCV version to be installed in the image by 
-editing [download_build_install_opencv.sh]
-(opencv-3.4.0/download_build_install_opencv.sh) script.
+editing [download_build_install_opencv.sh](opencv-3.4.0/download_build_install_opencv.sh) script.
 * Build the image by running:
 ```commandline
 docker build -t my_pi_opencv_img .
