@@ -12,10 +12,10 @@ If you prefer to build the image yourself (takes around 2 hours), you can do it 
 * Clone this repository into a Raspberry Pi 3 running Raspbian OS.
 ```commandline
 git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
-cd raspberrypi3-opencv-docker/opencv-<version>
 ```
 * Build the image by running:
 ```commandline
+cd raspberrypi3-opencv-docker/opencv-<version>
 docker build -t my_pi_opencv_img .
 ```
 * And run it
