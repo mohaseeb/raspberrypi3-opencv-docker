@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPENCV_VERSION=3.4.2
+OPENCV_VERSION=4.0.0
 
 WS_DIR=`pwd`
 mkdir opencv
@@ -24,6 +24,7 @@ mkdir build && cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
   -D CMAKE_INSTALL_PREFIX=/usr/local \
   -D OPENCV_EXTRA_MODULES_PATH=$OPENCV_CONTRIB_MODULES_SRC_DIR \
+  -D OPENCV_PYTHON2_INSTALL_PATH=/usr/local/lib/python2.7/site-packages/ \
   ..
 
 make -j4

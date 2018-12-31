@@ -1,6 +1,6 @@
 FROM resin/raspberrypi3-python:2.7
 
-cwd=$(pwd)
+RUN cwd=$(pwd)
 
 # Install dependencies needed for building and running OpenCV
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -9,30 +9,28 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential cmake pkg-config \
     checkinstall yasm \
     # to work with images
-    libjpeg8-dev libtiff-dev libjasper-dev libpng12-dev \
-    libtiff5-dev \
+    libjpeg-dev libtiff-dev libjasper-dev libpng12-dev libtiff5-dev \
     # to work with videos
-    libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev \
-    libxine2-dev libv4l-dev \
+    libavcodec-dev libavformat-dev libswscale-dev \
+    libxine2-dev libv4l-dev
 
 RUN cd /usr/include/linux && \
-    sudo ln -s -f ../libv4l1-videodev.h videodev.h \
+    sudo ln -s -f ../libv4l1-videodev.h videodev.h && \
     cd $cwd
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get install -y --no-install-recommends \
     libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev \
     # needed by highgui tool
     libgtk2.0-dev \
-    libtbb-dev qt5-default \ # ?
     # for opencv math operations
     libatlas-base-dev gfortran \
-    libmp3lame-dev libtheora-dev \ # ?
+    # others
+    libtbb2 libtbb-dev qt5-default \
+    libmp3lame-dev libtheora-dev \
     libvorbis-dev libxvidcore-dev libx264-dev \
     libopencore-amrnb-dev libopencore-amrwb-dev \
     libavresample-dev \
     x264 v4l-utils \
-    # others
-    libtbb2 libtbb-dev \
     # cleanup
     && rm -rf /var/lib/apt/lists/* \
     && apt-get -y autoremove
