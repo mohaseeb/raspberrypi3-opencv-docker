@@ -59,7 +59,7 @@ docker run -it --rm \
     -v `pwd`/save_video.py:/save_video.py \
     -v `pwd`:/videos \
     --device /dev/video0 \
-    mohaseeb/raspberrypi3-python-opencv \
+    my_pi_opencv_img \
     python /save_video.py
 ```
 The captured video will be written to file named output.avi in the current 
