@@ -17,7 +17,7 @@ git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
 ```
 * Build the image by running:
 ```commandline
-cd raspberrypi3-opencv-docker/opencv-<version>
+cd raspberrypi3-opencv-docker/<opencv version build script dir>
 docker build -t my_pi_opencv_img .
 ```
 * And run it
