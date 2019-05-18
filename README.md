@@ -3,6 +3,10 @@ The Git repo of an [OpenCV](https://opencv.org/) [Docker image](https://hub.dock
 , for Raspberry Pi 3 with Raspbian OS (Debian). The modules from OpenCV 
 contrib are included as well.  It is based on [the resin.io python image](https://hub.docker.com/r/resin/raspberrypi3-python/).
 
+
+
+[![Docker Stars](https://img.shields.io/docker/stars/mohaseeb/raspberrypi3-python-opencv.svg)](https://hub.docker.com/r/mohaseeb/raspberrypi3-python-opencv/) [![Docker Pulls](https://img.shields.io/docker/pulls/mohaseeb/raspberrypi3-python-opencv.svg)](https://hub.docker.com/r/mohaseeb/raspberrypi3-python-opencv/)
+
 ## Usage
 See [the image Docker Hub page](https://hub.docker.com/r/mohaseeb/raspberrypi3-python-opencv/)
  for information on how to use the image.
