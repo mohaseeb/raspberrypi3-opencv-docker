@@ -19,7 +19,7 @@ git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
 ```
 * Build the image by running:
 ```commandline
-cd raspberrypi3-opencv-docker/<opencv version build script dir>
+cd raspberrypi3-opencv-docker/opencv_4/4.1.0/
 docker build -t my_pi_opencv_img .
 ```
 * And run it
@@ -57,6 +57,7 @@ out.release()
 Execute the script as follows (assumes the camera appears as /dev/vidoe0 on 
 the Raspberry Pi)
 ```bash
+# run this from the same Pi directory as your save_video.py script
 docker run -it --rm \
     -v `pwd`/save_video.py:/save_video.py \
     -v `pwd`:/videos \
