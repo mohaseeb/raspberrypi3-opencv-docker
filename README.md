@@ -17,7 +17,7 @@ instructions.
 ```commandline
 git clone git@github.com:mohaseeb/raspberrypi3-opencv-docker.git
 ```
-* Build the image by running:
+* Build the image as follows (assumes you want to build the image for OpenvCV 4.1.0):
 ```commandline
 cd raspberrypi3-opencv-docker/opencv_4/4.1.0/
 docker build -t my_pi_opencv_img .
@@ -29,9 +29,11 @@ docker run -it --rm \
        my_pi_opencv_img \
        python -c "import cv2; print(cv2.__version__)"
 ```
-* And here is how you can capture video using your Raspberry Pi camera.
-<br>Save the video capturing script to a file named [save_video.py](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html#saving-a-video) in your Raspberry Pi.
+## Example
+This demonstrates how you can capture video using your Raspberry Pi camera.
+* Save the video capturing script to a file named `save_video.py` in your Raspberry Pi.
 ```python
+# based on https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html#saving-a-video
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -54,10 +56,10 @@ while n_frames > 0:
 cap.release()
 out.release()
 ``` 
-Execute the script as follows (assumes the camera appears as /dev/vidoe0 on 
+* Execute the script as follows (assumes the camera appears as /dev/vidoe0 on 
 the Raspberry Pi)
 ```bash
-# run this from the same Pi directory as your save_video.py script
+# run this from the same directory as your save_video.py script
 docker run -it --rm \
     -v `pwd`/save_video.py:/save_video.py \
     -v `pwd`:/videos \
@@ -65,8 +67,7 @@ docker run -it --rm \
     my_pi_opencv_img \
     python /save_video.py
 ```
-The captured video will be written to file named output.avi in the current 
-directory.
+* The captured video will be written to file named `output.avi` in the same directory from which the command was executed.
 ## References
 [OpenCV](https://opencv.org/) 
 <br>[Blog post on installing OpenCV 3 on Raspberry Pi](https://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/)
